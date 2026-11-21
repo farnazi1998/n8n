@@ -1,5 +1,5 @@
 def factorial(n):
-    if type(n) is not int:
+    if isinstance(n, bool) or not isinstance(n, int):
         raise TypeError("n must be an integer")
     if n < 0:
         raise ValueError("n must be non-negative")
@@ -11,6 +11,6 @@ def factorial(n):
 
 
 def is_even(n):
-    if type(n) is not int:
-        raise TypeError("n must be an integer and not a boolean")
+    if isinstance(n, bool) or not isinstance(n, int):
+        raise TypeError("n must be an integer")
     return n % 2 == 0
